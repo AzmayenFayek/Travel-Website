@@ -1,0 +1,46 @@
+#btn-signUp {
+    background-color: #fffc61;
+    margin-right: 3px;
+    color: #000;
+    border-radius: 30px;
+    padding: 5px 20px;
+}
+#btn-signIn {
+    padding: 5px 20px;
+    background-color: #ff136f;
+    color: #fff;
+    border-radius: 30px;
+}
+.btn-login, .btn-reg {
+    width: 100px;
+    border-radius: 20px;
+}
+
+.container-box {
+    max-width: 350px;
+    margin: 0 auto;
+    box-shadow: 0 0.4rem 1.2rem rgb(0 0 0 / 30%);
+
+}
+.emailField, .passwordField {
+    width: 80%;
+    border-radius: 20px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

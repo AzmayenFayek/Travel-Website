@@ -1,23 +1,70 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import {
+  BrowserRouter as Router, Route, Link, useParams,
+  Switch
+} from 'react-router-dom';
+import Home from './Components/Home/Home';
+import NotFound from './Components/NotFound/NotFound';
+// import Readmore from './Components/Readmore/Readmore';
+// import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import AuthProvider from './Components/AuthProvider/AuthProvider';
+import Contact from './Components/Contact/Contact';
+import Login from './Components/Login/Login';
+import About from './Components/About/About';
+import AddEvent from './Components/AddEvents/AddEvent';
+import Events from './Components/AllEvents/Events';
+import Navbar from './Shared/Navbar/Navbar';
+import Footer from './Shared/Footer/Footer';
+import Readmore from './Components/Readmore/Readmore';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthProvider>
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
+            </Route>
+            {/* <Route path="/Services">
+              <Services></Services>
+            </Route> */}
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/events">
+              <Navbar></Navbar>
+              <Events></Events>
+              <Footer></Footer>
+            </Route>
+            <Route exact path="/login">
+              <Login></Login>
+            </Route>
+            <Route exact path="/addEvents">
+              <AddEvent></AddEvent>
+            </Route>
+            {/* <Route exact path="/allEvents">
+              <Events></Events>
+            </Route> */}
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route path="/events/:id">
+              <Readmore></Readmore>
+            </Route>
+            {/* 
+            <PrivateRoute exact path="/readmore/:id">
+              <Readmore></Readmore>
+            </PrivateRoute> */}
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }
