@@ -1,21 +1,13 @@
 import React from "react";
-import { useParams } from "react-router";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Events.css";
-import Navbar from './../../Shared/Navbar/Navbar';
-import Footer from "../../Shared/Footer/Footer";
-import { useForm } from "react-hook-form";
 
 const Events = () => {
 
 
-  const handleReadmore = (id) => {
 
-    fetch(`http://localhost:5000/events/${id}`)
-      .then((res) => res.json())
-      .then((result) => console.log(result));
-  };
+
 
   const handleBuynow = (id) => {
     console.log(id);
@@ -26,14 +18,14 @@ const Events = () => {
   const [event, setEvent] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/allEvents`)
+    fetch(`https://fierce-garden-42274.herokuapp.com/allEvents`)
       .then((res) => res.json())
       .then((data) => setEvent(data));
   }, []);
 
+  console.log(event);
   return (
     <>
-
       <section className="events-section">
 
         <div className="container">
@@ -60,9 +52,12 @@ const Events = () => {
                       <p>{pd.time}</p>
                     </div>
                     <div className="d-flex justify-center">
-
-                      <button onClick={() => handleReadmore(pd._id)} className="fas fa-arrow-right"></button>
-
+                      <Link to={`/events/${pd._id}`}>
+                        <span className="fas fa-arrow-right"></span>
+                      </Link>
+                      {/* <Link to={`/events/${pd._id}`}>
+                        <button onClick={() => handleReadmore(pd._id)} className="fas fa-arrow-right"></button>
+                      </Link> */}
 
                       {/* <form onSubmit={handleReadmore(onSubmit)}> */}
                       {/* <span class="fas fa-arrow-right"></span> */}
