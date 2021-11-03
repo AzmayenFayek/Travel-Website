@@ -1,32 +1,15 @@
-.extra-margin-bottom{
-    margin-bottom: 64px;
-}
-.quote-item{
-    flex-basis: 33.3%;
-    margin-right: 56px;
-    text-align: left;
+.single-slider{
     position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin-top: 30px;
+    height: 300px;
+    background-image: url(https://preview.colorlib.com/theme/tralive/assets/img/hero/xh1_hero4.jpg.pagespeed.ic.eLXShnsZI3.jpg);
 }
 
-.quote-item::before{
-    content: url("https://about.udemy.com/wp-content/themes/wp-about-v4/assets/images/icon-quote.svg");
-    position: absolute;
-    top: -30px;
-}
-.quote-section{
-    justify-content: space-between;
-    display: flex;
-    margin-top: 64px;
-}
-.aboutUsText {
-    color: rgb(0, 0, 0);
-    margin-bottom: 120px;
-    margin-top: 100px;
+.text-style {
+    position: inherit;
+    margin-top: 10%;
+    color: #fff;
+    font-size: 60px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.4;
 }

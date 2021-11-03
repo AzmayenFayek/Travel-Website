@@ -4,6 +4,7 @@ import Footer from './../../Shared/Footer/Footer';
 // import HomePageServices from '../HomePageServices/HomePageServices';
 import Header from '../Header/Header';
 import Events from '../AllEvents/Events';
+import AboutSection from '../HomePageAboutSection/AboutSection';
 // import HowWeWork from '../HowWeWork/HowWeWork';
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
             <Events></Events>
             {/* <HowWeWork></HowWeWork>
             <HomePageServices></HomePageServices> */}
+            <AboutSection></AboutSection>
             <Footer></Footer>
         </div>
     );
