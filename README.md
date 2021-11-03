@@ -1,4 +1,4 @@
-# Dental Care
+# Tourism Related Web Application
 
 - sourse code: https://github.com/programming-hero-web-course1/tourism-or-delivery-website-client-side-AzmayenFayek
 - sourse code: https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-AzmayenFayek
