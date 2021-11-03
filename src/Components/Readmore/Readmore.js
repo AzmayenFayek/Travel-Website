@@ -25,51 +25,49 @@ const Readmore = () => {
     return (
         <>
             <Navbar></Navbar>
-            <section className="events-section">
+            <div className="support-company-area bottom-padding">
                 <div className="container">
-
-                    <div className="single-cat mb-30 ">
-                        <div className="cat-img">
-                            <img src={event.image} alt="" />
-                        </div>
-                        <div className="cat-cap">
-                            <div className="pricing d-flex justify-content-between">
-                                <h3> {event.title}</h3>
-                                <span className="price">${event.price}</span>
-                            </div>
-                            <div className="d-flex justify-content-between">
-
-                                <p>{event.date}</p>
-                                <p>{event.time}</p>
-                            </div>
-
-
-
-                            <div className="d-flex justify-center">
-                                <Link to={`/events/${event._id}`}>
-                                    <span className="fas fa-arrow-right"></span>
-                                </Link>
-                                {/* <Link to={`/events/${event._id}`}>
-                        <button onClick={() => handleReadmore(event._id)} className="fas fa-arrow-right"></button>
-                      </Link> */}
-
-                                {/* <form onSubmit={handleReadmore(onSubmit)}> */}
-                                {/* <span class="fas fa-arrow-right"></span> */}
-
-                                {/* </form> */}
-                                <Link to="/buynow">
-                                    <button onClick={() => handleBuynow(event._id)} className="fas fa-shopping-cart"></button>
-                                </Link>
+                    <div className="row align-items-center justify-content-between">
+                        <div className="col-xl-6 col-lg-6 col-md-10">
+                            <div className="support-location-img">
+                                <img src={event.image} alt=' ' />
                             </div>
                         </div>
-                        <div><p>{event.description}</p></div>
-                        <div><p>{id}</p></div>
+                        <div className="col-xl-5 col-lg-6 col-md-10">
+                            <div className="right-caption">
+
+                                <div className="section-tittle">
+                                    <h2>Details About {event.title} Tour</h2>
+                                </div>
+                                <div className="support-caption">
+                                    <p className="mb-50">{event.description}</p>
 
 
+
+                                    <div className="pricing d-flex justify-content-between">
+                                        <p className="date" >{event.date}</p>
+                                        <p className="date">{event.time}</p>
+                                    </div>
+                                    <div className="d-flex justify-content-between" ><span className="price">${event.price}</span>
+                                        <Link to="/buynow">
+                                            <button onClick={() => handleBuynow(event._id)} className="fas fa-shopping-cart"></button>
+                                        </Link></div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-            </section>
+
+
+
+
+
+
+
+
             <Footer></Footer>
         </>
 

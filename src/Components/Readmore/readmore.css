@@ -20,6 +20,18 @@
     color: #7ea0ff;
     line-height: 1;
 }
+.date {
+    font-size: 22px;
+    font-weight: 500;
+    color: #7ea0ff;
+    line-height: 1;
+}
+.price {
+    font-size: 22px;
+    font-weight: 700;
+    color: #14bea2;
+    line-height: 1;
+}
 .container>span{
     color: #7ea0ff;
     font-size: 16px;
