@@ -28,9 +28,6 @@ const Login = () => {
     const handleRegister = (e) => {
         e.preventDefault();
 
-        // const newRecord = { email, password }
-        // setRecords([...records, newRecord]);
-        // console.log(records);
         handleUserRegister(email, password);
         console.log(handleUserRegister)
     };
@@ -65,11 +62,11 @@ const Login = () => {
                                 <div className="login-regiater-btn mt-4">
                                     <button
                                         onClick={handleRegister}
-                                        className="btn btn-primary me-1 btn-reg"
+                                        className="btn btn-primary me-1 btn-reg" id="btn-signUp"
                                     >
                                         Sign Up
                                     </button>
-                                    {<Link to="/home" onClick={handleLogin} className="btn btn-success ms-1 btn-login">
+                                    {<Link to="/home" onClick={handleLogin} className="btn btn-success ms-1 btn-login" id="btn-signIn">
                                         Sign In
                                     </Link>}
                                 </div>

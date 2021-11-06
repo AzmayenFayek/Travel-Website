@@ -16,6 +16,7 @@ import Events from './Components/AllEvents/Events';
 import Navbar from './Shared/Navbar/Navbar';
 import Footer from './Shared/Footer/Footer';
 import Readmore from './Components/Readmore/Readmore';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -43,22 +44,18 @@ function App() {
             <Route exact path="/login">
               <Login></Login>
             </Route>
-            <Route exact path="/addEvents">
+            <PrivateRoute exact path="/addEvents">
               <AddEvent></AddEvent>
-            </Route>
+            </PrivateRoute>
             {/* <Route exact path="/allEvents">
               <Events></Events>
             </Route> */}
             <Route exact path="/contact">
               <Contact></Contact>
             </Route>
-            <Route exact path="/events/:id">
+            <PrivateRoute exact path="/events/:id">
               <Readmore></Readmore>
-            </Route>
-            {/* 
-            <PrivateRoute exact path="/readmore/:id">
-              <Readmore></Readmore>
-            </PrivateRoute> */}
+            </PrivateRoute>
             <Route exact path="*">
               <NotFound></NotFound>
             </Route>
